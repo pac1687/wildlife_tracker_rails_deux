@@ -12,6 +12,7 @@
   <% @specie.sightings.each do |sighting| %>
     <li>
       Sighting ID: <%= sighting.id %> |
+      Region: <%= sighting.region.name %> |
       Longitude: <%= sighting.longitude %> |
       Latitude: <%= sighting.latitude %> |
       <a href="/species/<%= @specie.id %>/sightings/<%= sighting.id %>/edit">Edit</a> |

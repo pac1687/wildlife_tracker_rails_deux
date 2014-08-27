@@ -1,5 +1,6 @@
 class SightingsController < ApplicationController
   def new
+    @regions = Region.all
     specie = Specie.find(params[:specie_id])
     @sighting = specie.sightings.new
     render('sightings/new.html.erb')
@@ -7,10 +8,11 @@ class SightingsController < ApplicationController
 
   def create
     @specie = Specie.find(params[:specie_id])
-    @sighting = Sighting.new(specie_id: params[:specie_id], longitude: params[:longitude], latitude: params[:latitude])
+    @sighting = Sighting.new(specie_id: params[:specie_id], longitude: params[:longitude], latitude: params[:latitude], region_id: params[:region_id])
     if @sighting.save
       render('sightings/success.html.erb')
     else
+      @regions = Region.all
       render('sightings/new.html.erb')
     end
   end
