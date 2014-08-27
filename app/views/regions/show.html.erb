@@ -1,3 +1,7 @@
 <h1><%= @region.name %></h1>
-
+<p><a href="/regions/<%= @region.id %>/edit">Edit</a></p>
+<p><a href="/regions/<%= @region.id %>"
+    data-confirm="You sure girl?"
+    data-method="delete"
+    rel="nofollow">Delete</a></p>
 <p><a href="/species">Return to the specie listing bitch</a></p>
