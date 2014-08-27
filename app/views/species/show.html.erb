@@ -5,4 +5,24 @@
     data-confirm="You sure girl?"
     data-method="delete"
     rel="nofollow">Delete</a></p>
+
+<p>Sightings:</p>
+
+<ul>
+  <% @specie.sightings.each do |sighting| %>
+    <li>
+      Sighting ID: <%= sighting.id %> |
+      Longitude: <%= sighting.longitude %> |
+      Latitude: <%= sighting.latitude %> |
+      <a href="/species/<%= @specie.id %>/sightings/<%= sighting.id %>/edit">Edit</a> |
+      <a href="/species/<%= @specie.id %>/sightings/<%= sighting.id %>"
+         data-confirm="You sure girl?"
+         data-method="delete"
+         rel="nofollow">Delete</a>
+    </li>
+  <% end %>
+</ul>
+
+<p><a href="/species/<%= @specie.id %>/sightings/new">Add Sightings</a></p>
+
 <p><a href="/species">Return to the specie listing bitch</a></p>

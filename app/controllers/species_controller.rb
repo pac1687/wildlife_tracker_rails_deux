@@ -27,7 +27,7 @@ class SpeciesController < ApplicationController
 
   def update
     @specie = Specie.find(params[:id])
-    if @specie.update( name: params[:name])
+    if @specie.update(name: params[:name])
       render('species/success.html.erb')
     else
       render('species/edit.html.erb')
