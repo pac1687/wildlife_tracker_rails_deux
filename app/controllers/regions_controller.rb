@@ -17,4 +17,18 @@ class RegionsController < ApplicationController
     @region = Region.find(params[:id])
     render('regions/show.html.erb')
   end
+
+  def edit
+    @region = Region.find(params[:id])
+    render('regions/edit.html.erb')
+  end
+
+  def update
+    @region = Region.find(params[:id])
+    if @region.update(name: params[:name])
+      render('regions/success.html.erb')
+    else
+      render('regions/edit.html.erb')
+    end
+  end
 end
