@@ -1,4 +1,18 @@
 <h1><%= @region.name %></h1>
+
+<p>Sightings within <%= @region.name %>:</p>
+
+<ul>
+  <% @region.sightings.each do |sighting| %>
+    <li>
+      Sighting ID: <%= sighting.id %> |
+      Specie: <a href="/species/<%= sighting.specie_id %>"><%= sighting.specie.name %></a> |
+      Longitude: <%= sighting.longitude %> |
+      Latitude: <%= sighting.latitude %> |
+    </li>
+  <% end %>
+</ul>
+
 <p><a href="/regions/<%= @region.id %>/edit">Edit</a></p>
 <p><a href="/regions/<%= @region.id %>"
     data-confirm="You sure girl?"
