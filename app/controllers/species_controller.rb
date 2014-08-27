@@ -1,6 +1,7 @@
 class SpeciesController < ApplicationController
 
   def index
+    @regions = Region.all
     @species = Specie.all
     @specie = Specie.new
     render('species/index.html.erb')
