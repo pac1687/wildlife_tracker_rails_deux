@@ -4,13 +4,8 @@ class RegionsController < ApplicationController
     if @region.save
       render('regions/success.html.erb')
     else
-      render('regions/new.html.erb')
+      render('species/index.html.erb')
     end
-  end
-
-  def new
-    @region = Region.new
-    render('regions/new.html.erb')
   end
 
   def show
