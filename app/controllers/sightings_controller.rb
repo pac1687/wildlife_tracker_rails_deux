@@ -18,6 +18,7 @@ class SightingsController < ApplicationController
   end
 
   def edit
+    @regions = Region.all
     @specie = Specie.find(params[:specie_id])
     @sighting = Sighting.find(params[:sighting_id])
     render('sightings/edit.html.erb')
@@ -28,7 +29,8 @@ class SightingsController < ApplicationController
     @sighting = Sighting.find(params[:sighting_id])
     if @sighting.update(specie_id: params[:specie_id],
                         longitude: params[:longitude],
-                        latitude: params[:latitude])
+                        latitude: params[:latitude],
+                        region_id: params[:region_id])
       render('sightings/success.html.erb')
     else
       render('sightings/edit.html.erb')
