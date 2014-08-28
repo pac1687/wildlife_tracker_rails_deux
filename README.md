@@ -7,7 +7,7 @@
 This program was written as an testament to our Ruby on Rails knowledge for Epicodus Summer 2014
 
 ####Our Story:
-![Alt text](http://i.imgur.com/ANTdcar)
+![alt text](http://i.imgur.com/ANTdcarl.jpg?1)
 
 ###Description:
 The Forest Service is considering a proposal from a timber company to clear-cut an old-growth forest of virgin Douglas fir just outside of Portland. Before they give the go-ahead, they need to do an environmental impact study. They've asked you and your pair to build an app so that the rangers can report wildlife sightings.
