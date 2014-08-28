@@ -23,18 +23,17 @@ The Forest Service is considering a proposal from a timber company to clear-cut 
 + Delete unwanted entries
 
 ####Requirements
-* The current stable version of Ruby 2.1.2.
+* The current stable version of Ruby 2.1.2. Rails 4
 * Text Editor (Sublime 3 beta)
 * Postgresql
 
 #####Instructions:
-1) Download zip file
-2) Enact rake db:create
-    * rake db:migrate
-
-3) Run rails server
-4) Open browser to localhost:3000
-5) Be amazed
+1. Download zip file
+2. Enact rake db:create
+3. Run rake db:migrate
+4. Run rails server
+5. Open browser to localhost:3000
+6. Be amazed
 
 
 ##Schema:
